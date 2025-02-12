@@ -1,0 +1,82 @@
+{
+  "recipes": [
+    {
+      "title": "Mojito Recipe",
+      "about": "Mix this classic cocktail for a party using fresh mint, white rum, sugar, zesty lime, and cooling soda water. Perfect for a hot day, the Mojito balances sweetness with tangy lime and refreshing mint. Experiment with the proportions to find your ideal mix.",
+      "author": "Jamie",
+      "id": 1
+    },
+    {
+      "title": "Tom Collins",
+      "about": "Master the art of the classic Tom Collins cocktail with this refined recipe. Made with premium gin, freshly squeezed lemon juice, a dash of sugar syrup, and topped with soda water, it delivers a crisp and refreshing taste. Try experimenting with modern twists for an extra kick.",
+      "author": "Jacques",
+      "id": 2
+    },
+    {
+      "title": "Sex on the Beach",
+      "about": "Combine smooth vodka with sweet peach schnapps and tangy cranberry juice to create a cocktail as vibrant as its name. Garnish with cocktail cherries and an orange slice to enhance both flavor and presentation. Ideal for lively summer evenings.",
+      "author": "Nehi",
+      "id": 3
+    },
+    {
+      "title": "Piña Colada Recipe",
+      "about": "A tropical blend of rich coconut cream, white rum, and tangy pineapple juice, the Piña Colada is a vacation in a glass. Serve it blended with ice and garnish with a pineapple slice and a colorful umbrella for that authentic tropical vibe.",
+      "author": "Jamie",
+      "id": 4
+    },
+    {
+      "title": "Margarita",
+      "about": "A timeless classic, the Margarita combines tequila, fresh lime juice, and orange liqueur, served on the rocks with a salted rim. This cocktail is both tart and refreshing, making it perfect for a lively fiesta or a relaxing evening.",
+      "author": "Zyro",
+      "id": 5
+    },
+    {
+      "title": "Old Fashioned",
+      "about": "A nod to tradition, this cocktail is made by muddling a sugar cube with bitters, adding a splash of water, and then mixing in bourbon or rye whiskey. Garnish with an orange twist and a cherry for a smooth, sophisticated drink that stands the test of time.",
+      "author": "Morningstar",
+      "id": 6
+    },
+    {
+      "title": "Cosmopolitan",
+      "about": "Popularized in the 90s, the Cosmopolitan features vodka, triple sec, cranberry juice, and freshly squeezed lime juice. Served chilled in a martini glass, this cocktail is elegant, stylish, and perfect for a night out.",
+      "author": "Theos",
+      "id": 7
+    },
+    {
+      "title": "Bloody Mary",
+      "about": "Ideal for brunch, this savory cocktail mixes vodka with tomato juice, lemon juice, and a blend of spices. Garnish with celery, olives, or even bacon for an extra twist, making it a refreshing yet hearty choice.",
+      "author": "Xamion",
+      "id": 8
+    },
+    {
+      "title": "Long Island Iced Tea",
+      "about": "A potent mix of tequila, vodka, rum, gin, and triple sec with a splash of cola, lemon juice, and simple syrup creates a deceptively smooth yet powerful cocktail that mimics the flavor of iced tea. Perfect for those who like a strong kick.",
+      "author": "Amy",
+      "id": 9
+    },
+    {
+      "title": "Mai Tai",
+      "about": "This iconic tiki cocktail mixes rum, lime juice, orange curaçao, and orgeat syrup to produce a balanced tropical drink with a hint of almond, perfect for evoking beach vibes and a relaxed atmosphere.",
+      "author": "Feyi",
+      "id": 10
+    },
+    {
+      "title": "Daiquiri",
+      "about": "A classic cocktail featuring white rum, fresh lime juice, and simple syrup, shaken until perfectly chilled and served straight up. This drink is a refreshing, tangy delight that highlights the natural flavors of its ingredients.",
+      "author": "Zena",
+      "id": 11
+    },
+    {
+      "title": "Sidecar",
+      "about": "An elegant cocktail that blends cognac, orange liqueur, and lemon juice into a balanced mix, served in a sugar-rimmed glass for an extra touch of sophistication. Its refined flavor makes it ideal for a classy evening.",
+      "author": "Trixie",
+      "id": 12
+    },
+    {
+      "title": "Screwdriver",
+      "about": "A simple yet classic cocktail combining vodka and freshly squeezed orange juice, ideal for a refreshing brunch or a laid-back evening. Its straightforward preparation makes it a perennial favorite.",
+      "author": "Zoe",
+      "id": 13
+    }
+  ]
+}
