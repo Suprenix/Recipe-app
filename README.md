@@ -1,13 +1,22 @@
-**Nehi's Cocktail Recipes**
+# Nehi's Cocktail Recipes
+
 A simple React application for displaying cocktail recipes. Users can view a list of recipes, click on one to see detailed information, and have the selected recipe filtered out of the main list.
 
-**Features**
-Recipe Listing:  
-Fetches recipes from a local JSON file using a JSON server and displays them.
+## Features
 
-View Details:
-Clicking on a recipe shows its detailed view, including title, description, and author.
+### Recipe Listing
+- **Fetches Recipes:**  
+  Retrieves recipes from a local JSON file using a JSON server.
+- **Display:**  
+  Shows a list of cocktail recipes.
 
-Navigation Bar:
-A navigation component (using react-router-dom) for navigating between different parts of the application (view, edit, add recipes).
+### View Details
+- **Detailed View:**  
+  Clicking on a recipe reveals detailed information including the title, description, and author.
+
+### Navigation Bar
+- **Routing:**  
+  Utilizes `react-router-dom` for navigation between different parts of the application.
+- **Sections:**  
+  Provides navigation options to view recipes, edit recipes, and add new recipes.
 
