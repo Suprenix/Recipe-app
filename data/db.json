@@ -1,7 +1,7 @@
 {
   "recipes": [
     {
-      "title": "Mojito Recipe",
+      "title": "Mojito",
       "about": "Mix this classic cocktail for a party using fresh mint, white rum, sugar, zesty lime, and cooling soda water. Perfect for a hot day, the Mojito balances sweetness with tangy lime and refreshing mint. Experiment with the proportions to find your ideal mix.",
       "author": "Jamie",
       "id": 1
@@ -19,7 +19,7 @@
       "id": 3
     },
     {
-      "title": "Piña Colada Recipe",
+      "title": "Piña Colada",
       "about": "A tropical blend of rich coconut cream, white rum, and tangy pineapple juice, the Piña Colada is a vacation in a glass. Serve it blended with ice and garnish with a pineapple slice and a colorful umbrella for that authentic tropical vibe.",
       "author": "Jamie",
       "id": 4
