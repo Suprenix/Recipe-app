@@ -1,7 +1,9 @@
 **Nehi's Cocktail Recipes**
+
 A simple React application for displaying cocktail recipes. Users can view a list of recipes, click on one to see detailed information, and have the selected recipe filtered out of the main list.
 
 **Features**
+
 Recipe Listing:  
 Fetches recipes from a local JSON file using a JSON server and displays them.
 
