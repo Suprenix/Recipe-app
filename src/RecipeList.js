@@ -1,38 +1,44 @@
-import { useState } from "react";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 
 const RecipeList = ({ recipes }) => {
-  const [details, setDetails] = useState(null);
+  const location = useLocation();
+  const isEditMode = location.pathname.endsWith("/edit");
+  const isViewMode = location.pathname === ("/");
+  const navigate = useNavigate();
 
-  const showDetails = (selectedRecipe) => {
-    setDetails(selectedRecipe);
+  const handleEdit = (recipeId) => {
+    navigate("/edit/"+ recipeId);
   };
-
-  const hideDetails = () => {
-    setDetails(null);
-  };
-
-  const filteredRecipes = details
-    ? recipes.filter((recipe) => recipe.id !== details.id)
-    : recipes;
+  const handleDelete = (recipeId) => {     
+    fetch('http://localhost:5000/recipes/' + recipeId, {
+      method:'DELETE'
+    }).then(() =>{
+      window.location.reload();
+    })
+  };  
 
   return (
     <div className="recipe-container">
-      {details && (
-        <div className="recipe-details">
-          <div className="recipe-div" key={details.id}>
-            <h2>{details.title}</h2>
-            <p>{details.about}</p>
-            <p>{details.author}</p>
-            <button onClick={hideDetails}>Close Details</button>
-          </div>
-        </div>
-      )}
-      <div className="recipe-contain">
-        {filteredRecipes.map((recipe) => (
+      <div className={"recipe-contain" + (isEditMode ? "-edit" : "")}>
+        {recipes.map((recipe) => (
           <div className="recipe-div" key={recipe.id}>
-            <h2>{recipe.title}</h2>
-            <p>{recipe.author}</p>
-            <button onClick={() => showDetails(recipe)}>View Details</button>
+            {isViewMode && (
+              <Link to={"/recipes/"+ recipe.id}>
+                <h2>{recipe.title}</h2>
+                <p>{recipe.author}</p>
+              </Link>
+            )}
+            {isEditMode && (
+              <div>
+                  <h2>{recipe.title}</h2>
+                  <p>{recipe.author}</p>
+                <div className="edit-buttons">
+                  
+                  <button onClick={() => handleEdit(recipe.id)}>Edit</button>
+                  <button onClick={() => handleDelete(recipe.id)}>Delete</button>
+                </div>
+              </div>
+            )}
           </div>
         ))}
       </div>

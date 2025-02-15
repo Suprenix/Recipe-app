@@ -1,32 +1,55 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 
-const CreateRecipe = () => {
+const EditData = () => {
 
+    const {id} = useParams();
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
     const [info, setInfo] = useState('');
     const [confirm, setConfirm] = useState('');
+    const [isPending,setIsPending] = useState(true);
     const navigate = useNavigate();
+
+    const url = 'http://localhost:5000/recipes/' + id
+    useEffect(() =>{
+        fetch(url)
+        .then(res => {
+            if (!res.ok ){
+                navigate('Notfound');
+                throw Error('Could not fetch data');
+            }
+            return res.json();
+        })
+        .then(data => {
+            setTitle(data.title);
+            setAuthor(data.author);
+            setInfo(data.about);
+            setIsPending(false);
+        })
+        .catch(err =>{
+            console.log(err.message)
+        })
+    }, [url] )
 
     const handleSubmit = (e) =>{
         e.preventDefault();
         const recipe = {title, about: info, author};
         const timeValue = 1000
 
-        setConfirm('Adding Recipe...');
+        setConfirm('Editing Recipe...');
         setTimeout(() => {
-            fetch('http://localhost:5000/recipes', {
-                method: 'POST',
+            fetch('http://localhost:5000/recipes/' + id, {
+                method: 'PUT',
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(recipe)
             }).then(() =>{
-                setConfirm('New recipe added.');
+                setConfirm('Edit Complete');
                 setTimeout(() =>{
-                    setConfirm(prevConfirm => prevConfirm + " Redirecting to Home Page in" + timeValue/1000 + " seconds");
+                    setConfirm("You will be redirected to Edit Recipes Page in " + timeValue/1000 + " seconds");
                     setTimeout(() =>{
-                        navigate('/');}, timeValue);
+                        navigate('/edit');}, timeValue);
                 }, timeValue)
             })
             
@@ -39,7 +62,7 @@ const CreateRecipe = () => {
 
     return ( 
         <div className="recipe-form">
-            <h1>Add New Recipe</h1>
+            <h1>Edit Recipe</h1>
             <form onSubmit={handleSubmit}>
                 <label>Recipe Name</label>
                 <input 
@@ -64,11 +87,11 @@ const CreateRecipe = () => {
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                 />
-                <button>Add Recipe</button>
+                <button>Confirm Edit</button>
             </form>
             <div>{confirm}</div>
         </div>
      );
 }
  
-export default CreateRecipe;
+export default EditData;
