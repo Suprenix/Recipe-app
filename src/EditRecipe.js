@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react";
 import RecipeList from "./RecipeList";
 import useFetch from "./useFetch.js";
 
+const EditRecipe = () => {
 
-const Home = () => {
     const {data, isPending} = useFetch('http://localhost:5000/recipes')
+    
     return ( 
         <div>
             {isPending && <div>Loading</div>}
-            {data && <RecipeList recipes = {data} /*setRecipes = {data}*/ />}
-        </div>  
+            {data && <RecipeList recipes = {data} />}
+        </div>
      );
 }
  
-export default Home;
+export default EditRecipe;
